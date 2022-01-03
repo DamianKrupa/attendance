@@ -8,7 +8,7 @@
             $this->db = $conn;
         }
         //publiczna funkcja, która wstawia rekordy do bazy
-        public function insert($fname, $lname, $dob, $email, $phone, $speciality){
+        public function insertAttendees($fname, $lname, $dob, $email, $phone, $speciality){
             try {
                 //$sql = "INSERT INTO attende VALUES (firstname,lastname,dob,email,phone,speciality_id) 
                                     //(:fname,:lname,:dob,:email,:phone,:speciality)";
@@ -32,8 +32,22 @@
                 echo $e->getMessage();
                 return false;
             }
-
-
         }
+
+        public function getAttendees(){
+            //$sql = "SELECT * FROM `attende`";
+            $sql = "SELECT * FROM `attende` as a inner join `specialities` as s 
+            on a.speciality_id = s.speciality_id";
+            $resutl = $this->db->query($sql);
+            return $resutl;
+        }
+
+        public function getSpecialities(){
+            $sql = "SELECT * FROM `specialities`";
+            $resutl = $this->db->query($sql);
+            return $resutl;
+        }
+
+
     }
 ?>

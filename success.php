@@ -12,7 +12,7 @@
         $phone = $_POST['phone'];
         $speciality = $_POST['speciality'];
         //Wywołaj funkcję i śledź, czy została wykonana czy nie
-        $isSuccess = $crud->insert($fname, $lname, $dob, $email, $phone, $speciality);
+        $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $phone, $speciality);
 
     };
 
