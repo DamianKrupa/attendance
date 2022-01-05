@@ -10,7 +10,7 @@
     try {
         $pdo = new PDO($dsn, $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Hello Database";
+       // echo "Hello Database";
         //przechwytuje nasz error i zapisuje do zmiennej $e 
     } catch(PDOException $e) {
         //throw - zatrzymuje wykonywanie funkcji i wyświetla error za pomocą funkcji getMessage

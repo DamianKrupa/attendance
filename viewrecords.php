@@ -2,6 +2,11 @@
     $title = 'view_records';
     require_once 'includes/header.php'; 
     require_once 'db/conn.php';
+
+
+    
+
+
     $results = $crud->getAttendees();
 ?>
 
@@ -11,22 +16,17 @@
         <th>#</th>
         <th>First name</th>
         <th>Last name</th>
-        <th>Date of birth</th>
-        <th>E-mail</th>
-        <th>Phone number</th>
         <th>Speciality</th>
+        <th>Actions</th>
     </tr>
     <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
             <td> <?php echo $r['attendance_id'];  ?> </td>
             <td><?php echo $r['firstname']; ?> </td>
             <td> <?php echo $r['lastname'];  ?></td>
-            <td><?php echo $r['dob'];  ?> </td>
-            <td><?php echo $r['email'];  ?> </td>
-            <td><?php echo $r['phone'];  ?> </td>
-        
             <td><?php echo $r['name'];  ?> </td>
-           
+                <td><a href="view.php?id=<?php echo $r['attendance_id'];  ?>" class="btn btn-primary">View</a></td>
+                <td><a href="edit.php?id=<?php echo $r['attendance_id'];  ?>" class="btn btn-warning">Edit</a></td>
         </tr>
     <?php } ?>
 </table>
