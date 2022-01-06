@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git add .
+echo Podaj nazwę commita:
+read name_commit
+git commit -m $name_commit
+git push -u origin master
+
+echo Zkończono.
