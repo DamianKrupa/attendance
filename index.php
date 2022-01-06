@@ -27,7 +27,7 @@
         </div>
         <div class="mb-3">
             <label for="speciality" class="form-label">Area of Expertise</label>
-            <select required class="form-select" id="speciality" name="speciality">
+            <select class="form-select" id="speciality" name="speciality">
                 <!-- <option selected>Nie wybrano</option>
                 <option value="1">Database Admin</option>
                 <option value="2">Software Developer</option>

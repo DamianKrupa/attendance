@@ -1,12 +1,16 @@
 <?php 
-    //$host = 'server.samojeden.info';
-    $host = 'remotemysql.com';
-    //$db = 'attendance';
-    $db = 'mSw471Q5Sf';
-    //$user = 'root';
-    $user = 'mSw471Q5Sf';
-    //$pass = 'qxvqxv1991';
-    $pass = 'JcRLRyUS02';
+
+    //Nie mogę na remotemysql.com utworzyć drygi raz bazy, bo kurwa ankieta nie działa.
+    //Formularz nie wprowadzał danych, bo AutoIncement na kolumnie atenee_id się nie włączyło.
+    //Hak tylko uda mi się utworzyć bazę, przekopiuję ją, i wtedy w niej w phpmyASdmin utworzę AIinc
+    $host = 'server.samojeden.info';
+    //$host = 'remotemysql.com';
+    $db = 'attendance';
+    //$db = 'mSw471Q5Sf';
+    $user = 'root';
+    //$user = 'mSw471Q5Sf';
+    $pass = 'qxvqxv1991';
+    //$pass = 'JcRLRyUS02';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
