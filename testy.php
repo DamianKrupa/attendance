@@ -52,18 +52,16 @@ class Car {
 }
 
 
-
 }
 
 $myCar = new Car("black", "Volvo", "van", "disel");
-echo $myCar -> message();
+echo $myCar->message();
 echo "<br>";
 $myCar = new Car("red", "Toyota", "hatchback", "lpg");
 echo $myCar -> message();
 
 $good_car = new Car("black", "Volvo", "van", "disel");
 echo $myCar -> work_purpose();
-
 
 
 ?>

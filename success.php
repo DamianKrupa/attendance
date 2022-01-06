@@ -18,10 +18,10 @@
 
 
     if($isSuccess){
-        echo  '<h1 class="text-center text-success">You have been registered!</h1>';
+        include "includes/successmessage.php";
     }
     else{
-        echo  '<h1 class="text-center text-danger">Registration failed!</h1>';
+        include "includes/errormessage.php";
     }
 
 

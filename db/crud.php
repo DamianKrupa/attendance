@@ -59,23 +59,23 @@
             }catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
-
             }
-            
-           
-
+        
         }
 
 
 
-
-
         public function getAttendees(){
-            //$sql = "SELECT * FROM `attende`";
-            $sql = "SELECT * FROM `attende` as a inner join `specialities` as s 
-            on a.speciality_id = s.speciality_id";
-            $resutl = $this->db->query($sql);
-            return $resutl;
+            try{
+                $sql = "SELECT * FROM `attende` as a inner join `specialities` as s 
+                on a.speciality_id = s.speciality_id";
+                $resutl = $this->db->query($sql);
+                return $resutl;
+
+            }catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
         }
 
 
@@ -89,7 +89,21 @@
             return $result;
         }
 
+        public function deleteAttendees($id){
+            try{
+                $sql = "DELETE FROM `attende` WHERE `attendance_id`=:id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                return true;
+            }catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
 
+            }
+    
+        }
+            
 
 
         public function getSpecialities(){

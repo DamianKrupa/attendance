@@ -5,10 +5,9 @@
   
     
     //Gert attendee by id
-    if(isset($_GET['id'])){
-        echo "<h1 class='text-danger'> Please check details and check again </h1>";
-        
-        
+    if(!isset($_GET['id'])){
+        include "includes/errormessage.php";
+    
     } else {
         $id = $_GET['id'];
         $result = $crud->getAttendeesDetails($id);
@@ -23,10 +22,13 @@
         <p class="card-text">Date of birth: <?php echo $result['dob']; ?></p>
         <p class="card-text">E-mail: <?php echo $result['email']; ?></p>
         <p class="card-text">Phone number: <?php echo $result['phone']; ?></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        
     </div>
 </div> 
-
+    <a href="viewrecords.php" class="btn btn-info">Back to list</a></td>
+    <a href="edit.php?id=<?php echo $result['attendance_id'] ?>" class="btn btn-warning">Edit</a>
+    <a onclick="return confirm('Are you sure you want to delete?')" 
+    href="delete.php?id=<?php echo $result['attendance_id']; ?>" class="btn btn-danger">Delete</a></td>
 <?php } ?>
 
 

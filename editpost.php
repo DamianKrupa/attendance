@@ -15,14 +15,14 @@ if(isset($_POST['submit'])){
     $result = $crud->edditAttendees($id, $fname, $lname, $dob, $email, $phone, $speciality);
     if($result){
         header("Location: viewrecords.php");
-        echo "Successfully updated";
+        include "includes/successmessage.php";
     }
     else{
-        echo "error";
+        include "includes/errormessage.php";
     }
 }
 else{
-    echo "error";
+    include "includes/errormessage.php";
 }
 
 ?>
