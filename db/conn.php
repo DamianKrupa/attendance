@@ -1,8 +1,11 @@
 <?php 
-    $host = 'server.samojeden.info';
+    //$host = 'server.samojeden.info';
+    $host = 'remotemysql.com';
     $db = 'attendance';
-    $user = 'root';
-    $pass = 'qxvqxv1991';
+    //$user = 'root';
+    $user = 'mSw471Q5Sf';
+    //$pass = 'qxvqxv1991';
+    $pass = 'JcRLRyUS02';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
