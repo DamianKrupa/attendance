@@ -1,7 +1,8 @@
 <?php 
     //$host = 'server.samojeden.info';
     $host = 'remotemysql.com';
-    $db = 'attendance';
+    //$db = 'attendance';
+    $db = 'mSw471Q5Sf';
     //$user = 'root';
     $user = 'mSw471Q5Sf';
     //$pass = 'qxvqxv1991';
