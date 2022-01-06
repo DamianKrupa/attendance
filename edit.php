@@ -67,7 +67,8 @@
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
 
-        <button type="submit" name="submit" class="btn btn-success btn-block">Save changes</button>
+        <button type="submit" name="submit" class="btn btn-default btn">Back To List</button>
+        <button type="submit" name="submit" class="btn btn-success btn">Save Changes</button>
     </form>
 
 <?php } ?>
