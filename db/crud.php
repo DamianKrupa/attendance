@@ -80,6 +80,7 @@
 
 
         public function getAttendeesDetails($id){
+        try{
             $sql = "SELECT * FROM `attende` as a inner join `specialities` as s 
             on a.speciality_id = s.speciality_id where attendance_id = :id";
             $stmt = $this->db->prepare($sql);
@@ -87,6 +88,10 @@
             $stmt->execute();
             $result = $stmt->fetch();
             return $result;
+        }catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+            }
         }
 
         public function deleteAttendees($id){
